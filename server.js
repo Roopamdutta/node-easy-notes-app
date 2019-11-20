@@ -32,8 +32,10 @@ app.get('/', (req, res) => {
 });
 
 require('./app/routes/note.routes.js')(app);
-
+app.set('port', (process.env.PORT || 5000));
 // listen for requests
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
-});
+app.listen(app.get('port'), function() {
+
+  console.log("Node app is running at :" + app.get('port'))
+
+})
