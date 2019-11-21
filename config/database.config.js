@@ -1,3 +1,3 @@
 module.exports = {
-    url: DB_CONN
+    url: process.env.DB_CONN
 }
